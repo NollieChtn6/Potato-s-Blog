@@ -1,11 +1,13 @@
-import { useContext } from 'react';
-
 import { ArrowRight } from 'lucide-react';
+import { usePosts } from '../../contexts/postsContext';
+
 import { Button } from '../ui/button';
 
 import LatestArticleCard from './LatestArticleCard';
 
 function HomePage() {
+  const { posts } = usePosts();
+  const latestArticles = posts.slice(-3);
   return (
     <main className="homepage-container flex flex-col overflow-y-scroll h-full w-full text-pewter-900">
       <section
@@ -37,9 +39,9 @@ function HomePage() {
           </Button>
         </div>
         <div className="flex flex-col lg:flex-row lg:justify-around max-lg:space-y-3">
-          <LatestArticleCard />
-          <LatestArticleCard />
-          <LatestArticleCard />
+          {latestArticles.map((article) => (
+            <LatestArticleCard key={article.id} article={article} />
+          ))}
         </div>
       </section>
     </main>
