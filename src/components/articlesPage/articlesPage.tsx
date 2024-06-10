@@ -1,10 +1,9 @@
 import { usePosts } from '../../contexts/postsContext';
 
-import ArticleElement from '../article/articleElement';
+import ArticleElement from '../article/ArticleElement';
 
 function ArticlesPage() {
   const { posts } = usePosts();
-  const articlesList = posts;
 
   return (
     <main className="articles-page-container flex flex-col overflow-y-hidden h-full w-full text-pewter-900 p-3 space-y-6">
@@ -18,7 +17,7 @@ function ArticlesPage() {
         </p>
       </div>
       <div className="articles-container flex flex-col w-full overflow-y-scroll space-y-6">
-        {articlesList.map((article) => (
+        {posts.map((article) => (
           <ArticleElement key={article.id} article={article} />
         ))}
       </div>
