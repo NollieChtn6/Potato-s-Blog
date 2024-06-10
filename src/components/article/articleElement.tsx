@@ -17,14 +17,21 @@ function ArticleElement({ article }: ArticleInterface) {
         <h3 className="article-title text-2xl font-serif">{article.title}</h3>
         <p className="article-author">By {article.author}</p>
         <p className="article-meta text-sm">
-          Published on: {publicationDate} | In: {article.categoryname}
+          Published on: {publicationDate} | In:{' '}
+          <NavLink
+            to={`/categories/${article.categoryslug}`}
+            title={`To ${article.categoryname} Category`}
+            className="hover:text-oyster-pink-700"
+          >
+            {article?.categoryname}
+          </NavLink>
         </p>
       </div>
       <div className="article-excerpt flex-col">
         <p>{article.excerpt}</p>
       </div>
       <div className="article-btn-container flex-col">
-        <NavLink to="/articles/">
+        <NavLink to={`/articles/${article.slug}`}>
           <Button variant="ghost">Read more...</Button>
         </NavLink>
       </div>
