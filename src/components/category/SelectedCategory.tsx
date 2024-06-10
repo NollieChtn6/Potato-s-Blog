@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { useCategories } from '../../contexts/categoriesContext';
 import { usePosts } from '../../contexts/postsContext';
 
-import ArticleElement from '../article/ArticleElement.tsx';
+import ArticleElement from '../article/ArticleElement';
 
 function SelectedCategory() {
   // get category where slug === :slug
