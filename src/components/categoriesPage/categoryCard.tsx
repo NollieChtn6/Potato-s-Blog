@@ -18,7 +18,7 @@ function CategoryCard({ category }: CategoryProps) {
         <p className="text-md">{category.description}</p>
       </div>
       <div className="latest-article-btn-container flex h-[20%] align-middle justify-end">
-        <NavLink to="/articles/">
+        <NavLink to={`/categories/${category.slug}`}>
           <Button variant="ghost">Discover...</Button>
         </NavLink>
       </div>
