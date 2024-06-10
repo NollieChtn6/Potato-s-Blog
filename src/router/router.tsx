@@ -5,7 +5,7 @@ import HomePage from '../components/homepage/HomePage';
 import About from '../components/about/About';
 import Categories from '../components/categoriesPage/categoriesPage';
 import SelectedCategory from '../components/category/SelectedCategory';
-import ArticlesPage from '../components/articlesPage/articlesPage';
+import ArticlesPage from '../components/articlesPage/ArticlesPage';
 import SelectedArticle from '../components/article/SelectedArticle';
 
 const router = createBrowserRouter([
