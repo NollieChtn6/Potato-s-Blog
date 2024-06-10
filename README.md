@@ -4,6 +4,8 @@
 
 Welcome to Potato's Blog, where the charming and witty cat, Patate, shares her best tips and tricks to dominate the world. From epic adventures to gourmet food reviews, Patate offers her unique feline perspective on everything that matters to cats (and their humans).
 
+![Potato's Blog Home Page](src/assets/result/potatos_blog_final_result.png)
+
 ## :clipboard: Project Overview
 
 The goal of this project is to create a dynamic interface that displays the blog articles of our beloved cat, Patate. This blog is designed to be user-friendly, allowing readers to browse through various categories of articles and soon, to create, edit, and delete posts. Please note that the interface is currently under construction, with new features and improvements being added regularly.
